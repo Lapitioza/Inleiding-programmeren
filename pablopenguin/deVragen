@@ -1,0 +1,78 @@
+
+Leg uit hoe de code werkt? Waarom heb je dat zo gedaan?
+--
+De code werkt als volgt: Je hebt 'var penguin' (regel2), dit is het object die 
+alles van de pinguïn bij houdt (leeftijd, foto, het pad dat ie volgt, 
+en welke stap hij zit.) Daarna heb je allemaal elementen die nodig zijn
+om verandering te laten plaatsvinden (plaatje, leeftijd, buttons).
+
+nextAge (regel 24) heb je nodig om bij 0 te beginnen en vervolgens daar steeds 5
+erop te doen (voor het aantal jaren). Iedere keer wanneer er 5 jaar erop
+komt, neemt de pinguïn een stap vooruit in zijn pad.
+
+currentStep (regel 33) heb je nodig om te kijken waar de pinguïn zich op dat moment
+bevindt. De image is gelijk aan de stap die hij bevindt (zie de afbeeldingen
+hoe ze gesorteerd staan; ze zijn gegroepeerd in paden, en daar binnen in heb
+je stap 1, 2 en 3(sommige paden hebben minder stappen))
+
+Bij de buttons (regel49): Wanneer er een keuze gemaakt moet worden, verdwijnt de 
+'next' button. De andere twee buttons worden dan zichtbaar (ieder button
+bevat een eigen pad)
+Wanneer je bij het einde van een pad komt, verdwijnen alle buttons (next, yes, 
+no) (regel 56) en verschijnt de 'end' button. Deze zorgt ervoor dat je pagina refreshed
+wanneer je erop klikt.
+Mocht het niet het einde van een pad zijn, en er hoeft geen keuze gemaakt te
+worden, dan is alleen de next button zichtbaar. (regel 61)
+Ik heb dit zo gedaan omdat er maar 3 situaties kunnen zijn: Keuze, geen keuze,
+einde. Je kan dan heel makkelijk bepaalde buttons verbergen en weer laten zien.
+
+Ik heb twee switch statements gebruikt. (regel 72 t/m 94 en regel 100 t/m 134) 
+De reden hiervoor was omdat het met mijn game idee, het makkelijker in elkaar 
+zit met een switch statement, het ziet er overzichterlijker uit en mocht ik meer 
+keuzes willen toevoegen, dan gaat het zo heel makkelijk.
+
+Function setButtons (regel 70) zorgt er voor dat bij alle keuzes, de buttons verschillende
+namen hebben. De case geeft het pad aan waar de pinguïn zich bevindt.
+
+Function choose (regel 98) zorgt ervoor dat de keuzes die je maakt, daadwerkelijk naar 
+het pad leiden van je keuze.
+
+Penguin.step = 0 (regel 137) moet altijd want anders begin je niet bij het begin.
+
+function setProperties (regel 142) zorgt ervoor dat de image en de leeftijd verandert
+
+Als laatste de eventlisteners, (regel 151), die ervoor zorgen dat wanneer je op een button
+klikt, er ook daadwerkelijk iets gebeurt.
+--
+
+
+
+
+Hoe is het ontwikkelproces verlopen. Welke fases heb je doorlopen?
+--
+Ik wist niks van javascript code. Niks. Nul. Nada. Ik heb inspiratie gehaald
+uit het fotoboek bladeren, in combinatie met de jaargetijden veranderen. In het
+begin wist ik niet zo goed hoe ik het moest aanpakken, dus ik heb de eerste paar
+dagen voornamelijk zitten lezen uit het boek. Echter kwam ik er al gauw achter
+dat je daar echt niet super veel van leert, en dat je het beter kan doen.
+
+Ik begon met werken met arrays, maar kwam al snel tot de conclusie dat dat niet
+zou werken (of ik zou echt geen idee hebben hoe hah) omdat mijn plaatjes niet in
+volgorde zijn. Je kan namelijk keuzes maken en dan wijk je van je pad af.
+
+Toen dacht ik misschien meerdere array's te maken, maar dat vond ik ook gelijk
+en gedoe. Dit kon praktischer dacht ik. Ik heb een beetje lopen googlen en beetje
+rondgevraagd aan oudere jaars, en deze hadden het over een switch statement. Na
+er informatie over gezocht te hebben wist ik al dat dit exact was wat ik zocht.
+
+Verder was het voornamelijk gefrustreerd raken omdat ik weer een property op de
+verkeerde regel had geplaatst, of boos worden omdat wanneer ik iets kleins weg-
+haalde, gelijk mijn hele code verpest was. Gelukkig doet hij nu precies wat ik 
+wil, en was het stuntelen niet voor niks geweest.
+
+Ik heb ook wat problemen gehad met age en de buttons. Age kwam soms te staan als
+"age: 0 age: 0 age: 0", maar dat kwam voornamelijk omdat ik de string op de 
+verkeerde code gezet had ;).
+--
+
+Hey, have fun! Wel alle eindes kijken Fons, ik heb mijn best gedaan.
